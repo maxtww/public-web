@@ -1,0 +1,1086 @@
+/* ==================== 滤镜白色 Start ==================== */
+.filter-white {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+/* ==================== 滤镜白色 End ==================== */
+/* ==================== 箭头 Start ==================== */
+.arrow-style,
+.bread-crumbs a:after {
+  display: inline-block;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  color: inherit;
+  transform: rotate(45deg) translateY(-0.5em);
+  width: 1em;
+  height: 1em;
+  margin-left: 1em;
+}
+/* ==================== 箭头 End ==================== */
+/* ==================== 通用背景样式 Start ==================== */
+.full-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* ==================== 通用背景样式 End ==================== */
+/* ==================== 在1920下图片保持最小1920p Start ==================== */
+.mxw-full-img {
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 1903px) {
+  .mxw-full-img {
+    min-width: 1920px;
+  }
+}
+/* ==================== 在1920下图片保持最小1920p End ==================== */
+/* ==================== 通用分页 Start ==================== */
+.mxw-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.mxw-pagination > a {
+  min-width: 0.67rem;
+  padding-left: 0.33rem;
+  padding-right: 0.33rem;
+  height: 0.67rem;
+  background-color: #f4f4f4;
+  margin: 0.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 0.27rem;
+  font-family: "SourceHanSansCN-Regular";
+  transition: all 0.4s;
+  color: #666;
+  flex-shrink: 0;
+}
+.mxw-pagination > a:hover,
+.mxw-pagination > a.active {
+  background-color: #f5841f !important;
+  color: #fff;
+}
+@media screen and (max-width: 749px) {
+  .mxw-pagination {
+    margin-top: 0.67rem;
+  }
+  .mxw-pagination > a {
+    height: auto;
+    padding: 0.1rem 0.17rem;
+    min-width: auto;
+    font-size: 0.2rem;
+  }
+}
+/* ==================== 通用分页 End ==================== */
+/* ==================== 通用图帧滚动等待加载动画 Start ==================== */
+.mxw-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.mxw-loading .mxw-progress-bar {
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  color: #fff;
+  font-size: 12px;
+}
+.mxw-loading .mxw-progress-bar span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+}
+/* ==================== 通用图帧滚动等待加载动画 End ==================== */
+/* ==================== 通用向下滑动按钮 Start ==================== */
+.scroll-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+}
+.scroll-btn .icon {
+  position: relative;
+  width: 24px;
+  height: 42px;
+  background: #79a2fd -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #fff), to(#fff));
+  background: #79a2fd -webkit-linear-gradient(transparent, transparent 50%, #fff 0, #fff);
+  background: #79a2fd linear-gradient(transparent, transparent 50%, #fff 0, #fff);
+  background-size: 100% 200%;
+  border-radius: 100.2px;
+  -webkit-animation: animate1 10s linear infinite, animate2 10s ease-out infinite;
+  animation: animate1 10s linear infinite, animate2 10s ease-out infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scroll-btn .icon:before,
+.scroll-btn .icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.scroll-btn .icon:before {
+  width: 22px;
+  height: 40px;
+  background-color: #00467f;
+  border-radius: 100.2px;
+}
+.scroll-btn .icon:after {
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: animate5 10s linear infinite;
+  animation: animate5 10s linear infinite;
+}
+.scroll-btn .text {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  -webkit-animation: animate3 10s ease-out infinite, animate4 10s ease-out infinite;
+  animation: animate3 10s ease-out infinite, animate4 10s ease-out infinite;
+}
+@keyframes animate1 {
+  0% {
+    background-position: 0 100%;
+  }
+  20% {
+    background-position: 0 0;
+  }
+  21% {
+    background-color: #79a2fd;
+  }
+  29.99% {
+    background-color: #fff;
+    background-position: 0 0;
+  }
+  30% {
+    background-color: #79a2fd;
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  51% {
+    background-color: #79a2fd;
+  }
+  59% {
+    background-color: #fff;
+    background-position: 0 0;
+  }
+  60% {
+    background-color: #79a2fd;
+    background-position: 0 100%;
+  }
+  80% {
+    background-position: 0 0;
+  }
+  81% {
+    background-color: #79a2fd;
+  }
+  90%,
+  to {
+    background-color: #fff;
+  }
+}
+@keyframes animate2 {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  30% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  60% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  80% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes animate3 {
+  21% {
+    color: #79a2fd;
+  }
+  30% {
+    color: #fff;
+  }
+  51% {
+    color: #79a2fd;
+  }
+  60% {
+    color: #fff;
+  }
+  81% {
+    color: #79a2fd;
+  }
+  90% {
+    color: #fff;
+  }
+}
+@keyframes animate4 {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  30% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  60% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  80% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes animate5 {
+  0% {
+    -webkit-transform: scale(1) translateY(-10px);
+    transform: scale(1) translateY(-10px);
+    opacity: 1;
+  }
+  6% {
+    -webkit-transform: scale(0.9) translateY(3px);
+    transform: scale(0.9) translateY(3px);
+    opacity: 1;
+  }
+  14% {
+    -webkit-transform: scale(0.4) translateY(20px);
+    transform: scale(0.4) translateY(20px);
+    opacity: 0;
+  }
+  15%,
+  19% {
+    -webkit-transform: scale(0.4) translateY(-10px);
+    transform: scale(0.4) translateY(-10px);
+    opacity: 0;
+  }
+  28%,
+  29.99% {
+    -webkit-transform: scale(1) translateY(-10px);
+    transform: scale(1) translateY(-10px);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: scale(1) translateY(-10px);
+    transform: scale(1) translateY(-10px);
+    opacity: 1;
+  }
+  36% {
+    -webkit-transform: scale(0.9) translateY(2px);
+    transform: scale(0.9) translateY(2px);
+    opacity: 1;
+  }
+  44% {
+    -webkit-transform: scale(0.4) translateY(20px);
+    transform: scale(0.4) translateY(20px);
+    opacity: 0;
+  }
+  45%,
+  49% {
+    -webkit-transform: scale(0.4) translateY(-20px);
+    transform: scale(0.4) translateY(-20px);
+    opacity: 0;
+  }
+  58%,
+  59.99% {
+    -webkit-transform: scale(1) translateY(-10px);
+    transform: scale(1) translateY(-10px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scale(1) translateY(-20px);
+    transform: scale(1) translateY(-20px);
+    opacity: 1;
+  }
+  66% {
+    -webkit-transform: scale(0.9) translateY(2px);
+    transform: scale(0.9) translateY(2px);
+    opacity: 1;
+  }
+  74% {
+    -webkit-transform: scale(0.4) translateY(20px);
+    transform: scale(0.4) translateY(20px);
+    opacity: 0;
+  }
+  75%,
+  79% {
+    -webkit-transform: scale(0.4) translateY(-10px);
+    transform: scale(0.4) translateY(-10px);
+    opacity: 0;
+  }
+  88%,
+  to {
+    -webkit-transform: scale(1) translateY(-10px);
+    transform: scale(1) translateY(-10px);
+    opacity: 1;
+  }
+}
+/* ==================== 通用向下滑动按钮 End ==================== */
+/* ==================== 通用 - 内页Banner Start ==================== */
+.ny-banner {
+  overflow: hidden;
+  z-index: 1;
+}
+.ny-banner img {
+  width: 100%;
+}
+.ny-banner .bg-image {
+  overflow: hidden;
+}
+.ny-banner .info {
+  position: absolute;
+  left: 0;
+  z-index: 12;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 90px;
+}
+.ny-banner .info .mxw-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ny-banner .info .big-text {
+  margin-right: 30px;
+  font-size: 120px;
+  font-family: "Alibaba_PuHuiTi_Heavy";
+  background: linear-gradient(to bottom, #DA4625, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.ny-banner .info .title {
+  color: #fff;
+}
+.ny-banner .info .title .text1 {
+  font-size: 0.73rem;
+}
+.ny-banner .info .title .text2 {
+  font-size: 20px;
+}
+@media screen and (max-width: 749px) {
+  .ny-banner .text1 {
+    font-size: 0.37rem;
+  }
+  .ny-banner .text2 {
+    font-size: 0.2rem;
+    margin-top: 10px;
+  }
+}
+/* ==================== 通用 - 内页Banner End ==================== */
+/* ==================== 通用 - 面包屑 Start ==================== */
+.bread-crumbs {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #fff;
+}
+.bread-crumbs a {
+  font-size: 0.27rem;
+  color: #aaa;
+  line-height: 1;
+  transition: color 0.4s;
+  font-family: "Montserrat-Light";
+}
+.bread-crumbs a.active,
+.bread-crumbs a:hover {
+  color: #cf3b1b;
+}
+.bread-crumbs a:last-child:after {
+  display: none;
+}
+.bread-crumbs a:after {
+  content: "";
+  font-size: 6px;
+  color: #aaa !important;
+  margin-right: 1em;
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 749px) {
+  .bread-crumbs {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .bread-crumbs a {
+    font-size: 12px;
+  }
+}
+/* ==================== 通用 - 面包屑 End ==================== */
+/* ==================== 第三方分享平台样式定义 Start ==================== */
+.bsBox {
+  box-sizing: content-box;
+}
+.bsBox * {
+  box-sizing: content-box;
+}
+/* ==================== 第三方分享平台样式定义 End ==================== */
+/* ==================== 通用 - 内页分类 Start ==================== */
+.ny-category {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 24px 70px 0px rgba(0, 0, 0, 0.06);
+  z-index: 99;
+}
+.ny-category .itembox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ny-category .item {
+  display: block;
+  color: #717473;
+  font-family: "Montserrat-Light";
+  text-align: center;
+  position: relative;
+  transition: color 0.4s;
+  font-size: 0.27rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.ny-category .item.active {
+  color: #fff;
+  background-color: #cf3b1b;
+}
+.ny-category .item:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 750px) {
+  .ny-category .item {
+    height: 1.33rem;
+    line-height: 1.33rem;
+  }
+}
+@media screen and (max-width: 749px) {
+  .ny-category .item {
+    width: 32%;
+    padding: 0.23rem 0;
+    margin-right: 0;
+    font-size: 0.23rem;
+  }
+  .ny-category .item:nth-child(3n-1) {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .ny-category .item::after {
+    height: 2px;
+  }
+}
+/* ==================== 通用 - 内页分类 End ==================== */
+/* ==================== 通用 - 选择语言弹窗 Start ==================== */
+.select-language {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.select-language.active {
+  visibility: visible;
+  opacity: 1;
+}
+.select-language .content {
+  width: 13.33rem;
+  background-color: #fff;
+  padding: 1rem 0.83rem;
+  position: relative;
+}
+.select-language .content .close {
+  position: absolute;
+  top: 0.33rem;
+  right: 0.33rem;
+  width: 0.23rem;
+  height: 0.23rem;
+  transition: all 0.4s;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+.select-language .content .close:before,
+.select-language .content .close:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  opacity: 0.5;
+}
+.select-language .content .close:before {
+  width: 1px;
+  height: 100%;
+}
+.select-language .content .close:after {
+  width: 100%;
+  height: 1px;
+}
+.select-language .content .close:hover {
+  transform: rotate(135deg);
+  opacity: 1;
+}
+.select-language .title {
+  font-size: 0.3rem;
+  color: #333;
+  line-height: 1;
+  font-family: "Montserrat-Light";
+}
+.select-language .list {
+  margin-top: 0.5rem;
+  background-color: #f5f5f5;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.select-language .list-item {
+  width: 48%;
+  background-color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.23rem;
+  color: #999;
+  line-height: 1;
+  font-family: "Montserrat-Light";
+  transition: all 0.4s;
+}
+.select-language .list-item:hover {
+  background-color: rgba(0, 70, 127, 0.1);
+}
+.select-language .list-item.active {
+  background-color: #cf3b1b;
+  color: #fff;
+}
+.select-language .list-item:nth-child(2n) {
+  margin-left: 4%;
+}
+.select-language .list-item:nth-child(2) ~ .list-item {
+  margin-top: 2%;
+}
+/* ==================== 通用 - 选择语言弹窗 End ==================== */
+/* ==================== 通用3d加载中动画 Start ==================== */
+.common-model-load {
+  padding-top: 0.67rem;
+}
+.common-model-load .load-itembox {
+  width: 1.33rem;
+  height: 1.33rem;
+  margin: 0.67rem auto;
+  transition: all 3s;
+  position: relative;
+  animation: rotate_animate 3s ease infinite;
+  animation-delay: 0.8s;
+  transform-style: preserve-3d;
+  transform: rotateX(-37.5deg) rotateY(405deg);
+}
+.common-model-load .load-item {
+  width: 1.33rem;
+  height: 1.33rem;
+  border: 0.05rem solid #fff;
+  position: absolute;
+  background-color: rgba(102, 102, 102, 0.5);
+}
+.common-model-load .load-item:nth-of-type(1) {
+  transform: rotateY(90deg) translateZ(-0.67rem);
+}
+.common-model-load .load-item:nth-of-type(2) {
+  transform: rotateY(90deg) translateZ(0.67rem);
+}
+.common-model-load .load-item:nth-of-type(3) {
+  transform: rotateX(90deg) translateZ(0.67rem);
+}
+.common-model-load .load-item:nth-of-type(4) {
+  transform: rotateX(90deg) translateZ(-0.67rem);
+}
+.common-model-load .load-item:nth-of-type(5) {
+  transform: translateZ(0.67rem);
+}
+.common-model-load .load-item:nth-of-type(6) {
+  transform: translateZ(-0.67rem);
+}
+.common-model-load .load-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 3.33rem;
+}
+.common-model-load .load-text {
+  color: #fff;
+  font-size: 0.27rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+}
+.common-model-load .load-progress {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1.67rem;
+  height: 0.05rem;
+  width: 0;
+  max-width: 100%;
+  margin-bottom: 0.17rem;
+}
+@keyframes rotate_animate {
+  0% {
+    transform: rotateX(-37.5deg) rotateY(45deg);
+  }
+  50% {
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+  to {
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+}
+@media screen and (max-width: 749px) {
+  .common-model-load {
+    padding-top: 0.33rem;
+  }
+  .common-model-load .load-itembox {
+    width: 0.67rem;
+    height: 0.67rem;
+    margin: 0.33rem auto;
+    transition: all 3s;
+    position: relative;
+    animation: rotate_animate 3s ease infinite;
+    animation-delay: 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+  .common-model-load .load-item {
+    width: 0.67rem;
+    height: 0.67rem;
+    border: 0.03rem solid #fff;
+  }
+  .common-model-load .load-item:nth-of-type(1) {
+    transform: rotateY(90deg) translateZ(-0.33rem);
+  }
+  .common-model-load .load-item:nth-of-type(2) {
+    transform: rotateY(90deg) translateZ(0.33rem);
+  }
+  .common-model-load .load-item:nth-of-type(3) {
+    transform: rotateX(90deg) translateZ(0.33rem);
+  }
+  .common-model-load .load-item:nth-of-type(4) {
+    transform: rotateX(90deg) translateZ(-0.33rem);
+  }
+  .common-model-load .load-item:nth-of-type(5) {
+    transform: translateZ(0.33rem);
+  }
+  .common-model-load .load-item:nth-of-type(6) {
+    transform: translateZ(-0.33rem);
+  }
+  .common-model-load .load-text {
+    font-size: 0.2rem;
+  }
+}
+/* ==================== 通用3d加载中动画 End ==================== */
+/* ==================== layui主题色修改 Start ==================== */
+.layui-form-radio:hover *,
+.layui-form-radioed,
+.layui-form-radioed > i {
+  color: #cf3b1b;
+}
+.layui-form-checked[lay-skin=primary] i,
+.layui-form-checkbox[lay-skin=primary]:hover i,
+.layui-form-danger + .layui-form-select .layui-input,
+.layui-form-danger:focus {
+  border-color: #cf3b1b !important;
+}
+.layui-form-checked[lay-skin=primary] i,
+.layui-form-select dl dd.layui-this,
+.layui-btn {
+  background-color: #cf3b1b;
+}
+/* ==================== layui主题色修改 End ==================== */
+/* ==================== 移动端 通用滑动表格提示 Start ==================== */
+@media screen and (max-width: 749px) {
+  .common-table-tip {
+    font-size: 0.2rem;
+    color: #888;
+    text-align: center;
+    padding: 0.17rem 0;
+    background-color: #f5f5f5;
+  }
+}
+/* ==================== 移动端 通用滑动表格提示 End ==================== */
+/* ==================== 通用图片加载动画 Start ==================== */
+.img-load {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.img-load.hide {
+  display: none;
+}
+.img-load .text {
+  font-size: 14px;
+  margin-right: 20px;
+}
+.img-load .icon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-top-color: transparent;
+  border-radius: 100%;
+  animation: imgLoading infinite 0.75s linear;
+}
+@keyframes imgLoading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ==================== 通用图片加载动画 End ==================== */
+/* ==================== 侧边栏搜索弹窗 Start ==================== */
+.search-menus {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 99;
+  overflow: hidden;
+}
+.search-menus .menus-box {
+  width: 7.33rem;
+  background-color: #fff;
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+  padding: 2.1rem 0.9rem 0.5rem;
+  height: 100%;
+  margin-right: 0;
+  margin-left: auto;
+}
+.search-menus.active {
+  opacity: 1;
+  visibility: visible;
+}
+.search-menus.active .menus-box {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+.search-menus .close {
+  position: absolute;
+  top: 0.33rem;
+  right: 0.33rem;
+  width: 0.23rem;
+  height: 0.23rem;
+  transition: all 0.4s;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+.search-menus .close:before,
+.search-menus .close:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  opacity: 0.5;
+}
+.search-menus .close:before {
+  width: 1px;
+  height: 100%;
+}
+.search-menus .close:after {
+  width: 100%;
+  height: 1px;
+}
+.search-menus .close:hover {
+  transform: rotate(135deg);
+  opacity: 1;
+}
+.search-menus form {
+  padding-left: 0.33rem;
+  padding-right: 0.33rem;
+  background-color: #eee;
+  border-radius: 1.67rem;
+  display: flex;
+}
+.search-menus form input {
+  height: 0.77rem;
+  line-height: 0.77rem;
+  min-width: 0;
+  flex-grow: 1;
+  padding-right: 0.33rem;
+  font-size: 0.23rem;
+  color: #000;
+}
+.search-menus form input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.search-menus form input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.search-menus form input:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.search-menus form input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.search-menus form button {
+  font-size: 0.2rem;
+  flex-shrink: 0;
+}
+.search-menus form button img {
+  width: 0.33rem;
+}
+.search-menus .keyword {
+  display: block;
+  margin-top: 1rem;
+}
+.search-menus .text {
+  font-size: 0.4rem;
+  color: #cf3b1b;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.search-menus .item {
+  display: block;
+  background-color: #f8f8f8;
+  border-radius: 1.67rem;
+  padding: 0.17rem 0.33rem;
+  font-size: 0.22rem;
+  color: #666;
+  line-height: 1.4;
+  transition: all 0.4s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-menus .item:nth-child(2) ~ .item {
+  margin-top: 0.3rem;
+}
+.search-menus .item:hover {
+  color: #fff;
+  background-color: #cf3b1b;
+}
+/* ==================== 侧边栏搜索弹窗 End ==================== */
+/* ==================== 置顶按钮 Start ==================== */
+.goto-top {
+  position: fixed;
+  right: 1.17rem;
+  bottom: 20%;
+  font-size: 0.6rem;
+  background-color: #cf3b1b;
+  z-index: 11;
+  width: 1.17rem;
+  height: 1.17rem;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.goto-top .iconfont {
+  font-size: inherit;
+}
+.goto-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 749px) {
+  .goto-top {
+    right: 15px;
+    bottom: 5%;
+    width: 40.2px;
+    height: 40.2px;
+    font-size: 18px;
+  }
+}
+/* ==================== 置顶按钮 End ==================== */
+/* ==================== 通用3d加载中动画 Start ==================== */
+.common-model-load {
+  padding-top: 0.67rem;
+}
+.common-model-load .load-itembox {
+  width: 1.33rem;
+  height: 1.33rem;
+  margin: 0.67rem auto;
+  transition: all 3s;
+  position: relative;
+  animation: rotate_animate 3s ease infinite;
+  animation-delay: 0.8s;
+  transform-style: preserve-3d;
+  transform: rotateX(-37.5deg) rotateY(405deg);
+}
+.common-model-load .load-item {
+  width: 1.33rem;
+  height: 1.33rem;
+  border: 0.05rem solid #fff;
+  position: absolute;
+  background-color: rgba(102, 102, 102, 0.5);
+}
+.common-model-load .load-item:nth-of-type(1) {
+  transform: rotateY(90deg) translateZ(-0.67rem);
+}
+.common-model-load .load-item:nth-of-type(2) {
+  transform: rotateY(90deg) translateZ(0.67rem);
+}
+.common-model-load .load-item:nth-of-type(3) {
+  transform: rotateX(90deg) translateZ(0.67rem);
+}
+.common-model-load .load-item:nth-of-type(4) {
+  transform: rotateX(90deg) translateZ(-0.67rem);
+}
+.common-model-load .load-item:nth-of-type(5) {
+  transform: translateZ(0.67rem);
+}
+.common-model-load .load-item:nth-of-type(6) {
+  transform: translateZ(-0.67rem);
+}
+.common-model-load .load-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 3.33rem;
+}
+.common-model-load .load-text {
+  color: #fff;
+  font-size: 0.27rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+}
+.common-model-load .load-progress {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1.67rem;
+  height: 0.05rem;
+  width: 0;
+  max-width: 100%;
+  margin-bottom: 0.17rem;
+}
+@keyframes rotate_animate {
+  0% {
+    transform: rotateX(-37.5deg) rotateY(45deg);
+  }
+  50% {
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+  to {
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+}
+@media screen and (max-width: 749px) {
+  .common-model-load {
+    padding-top: 19.8px;
+  }
+  .common-model-load .load-itembox {
+    width: 40.2px;
+    height: 40.2px;
+    margin: 19.8px auto;
+    transition: all 3s;
+    position: relative;
+    animation: rotate_animate 3s ease infinite;
+    animation-delay: 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+  .common-model-load .load-item {
+    width: 40.2px;
+    height: 40.2px;
+    border: 1.8px solid #fff;
+  }
+  .common-model-load .load-item:nth-of-type(1) {
+    transform: rotateY(90deg) translateZ(-19.8px);
+  }
+  .common-model-load .load-item:nth-of-type(2) {
+    transform: rotateY(90deg) translateZ(19.8px);
+  }
+  .common-model-load .load-item:nth-of-type(3) {
+    transform: rotateX(90deg) translateZ(19.8px);
+  }
+  .common-model-load .load-item:nth-of-type(4) {
+    transform: rotateX(90deg) translateZ(-19.8px);
+  }
+  .common-model-load .load-item:nth-of-type(5) {
+    transform: translateZ(19.8px);
+  }
+  .common-model-load .load-item:nth-of-type(6) {
+    transform: translateZ(-19.8px);
+  }
+  .common-model-load .load-text {
+    font-size: 12px;
+  }
+}
+/* ==================== 通用3d加载中动画 End ==================== */
