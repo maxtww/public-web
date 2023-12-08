@@ -1084,3 +1084,85 @@
   }
 }
 /* ==================== 通用3d加载中动画 End ==================== */
+/* ==================== 友情链接样式 Start ==================== */
+footer .foot-link {
+  position: relative;
+  z-index: 13;
+  background-color: #2F318B;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+footer .foot-link img,
+footer .foot-link span,
+footer .foot-link a {
+  position: relative;
+  z-index: 3;
+}
+footer .foot-link span {
+  color: #fff;
+  font-size: 0.25rem;
+  cursor: pointer;
+  margin-right: 0.33rem;
+  padding-left: 0.17rem;
+  border-left: 0.08rem solid #fff;
+}
+footer .foot-link img {
+  width: 0.5rem;
+}
+footer .foot-link a {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.8;
+  font-size: 0.23rem;
+}
+footer .foot-link a:last-child:after {
+  display: none;
+}
+footer .foot-link a:after {
+  content: ",";
+}
+footer .foot-link a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+footer .foot-online-link {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  font-size: 0.2rem;
+  padding: 0.17rem 0.33rem;
+  display: none;
+}
+footer .foot-online-link a {
+  color: #333;
+  line-height: 1.8;
+  font-size: 0.23rem;
+}
+footer .foot-online-link a:last-child:after {
+  display: none;
+}
+footer .foot-online-link a:after {
+  content: ",";
+}
+footer .foot-online-link a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 749px) {
+  footer .foot-link {
+    display: none;
+    margin-top: 19.8px;
+    font-size: 12px;
+  }
+  footer .foot-link a {
+    font-size: 12px;
+  }
+  footer .foot-online-link {
+    padding: 10.2px 15px;
+  }
+  footer .foot-online-link a {
+    font-size: 12px;
+  }
+}
+/* ==================== 友情链接样式 End ==================== */
+
