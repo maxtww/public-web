@@ -1,0 +1,63 @@
+/**
+ * @Description: 【标题】模板1
+ * @Author: MaXueWei    
+ * @Date: 2023-12-9 11:38:00
+ * @LastEditors: MaXueWei
+ * @LastEditTime: 2023-12-9 11:38:00
+ */
+ // 主题色
+@primary-color: #0d5bc1;
+// css断点宽度
+@pc-media: 750px;
+// css断点宽度
+@mobile-media: 749px;
+@1p: 1px;
+@2p: 2px;
+/* ==================== 标题 - 模板1 Start ==================== */
+.title-template1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.8333rem;
+
+    &.white {
+
+        .text1,
+        .text2 {
+            color: #fff;
+        }
+    }
+
+    .text1 {
+        font-size: 0.3333rem;
+        color: @primary-color;
+        margin-bottom: 0.3333rem;
+        line-height: 1.1;
+    }
+
+    .text2 {
+        font-size: 0.6rem;
+        color: #333;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (min-width: @pc-media) {
+  .title-template1 {
+  }
+}
+
+@media screen and (max-width: @mobile-media) {
+  .title-template1 {
+    margin-bottom: 30px;
+
+    .text1 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .text2 {
+      font-size: 22px;
+    }
+  }
+}
+/* ==================== 标题 - 模板1 End ==================== */

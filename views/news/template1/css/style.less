@@ -1,0 +1,335 @@
+/**
+ * @Description: 【新闻】模板1
+ * @Author: MaXueWei    
+ * @Date: 2023-12-9 11:38:45
+ * @LastEditors: MaXueWei
+ * @LastEditTime: 2023-12-9 11:38:45
+ */
+ // 主题色
+@primary-color: #0d5bc1;
+// css断点宽度
+@pc-media: 750px;
+// css断点宽度
+@mobile-media: 749px;
+@1p: 1px;
+@2p: 2px;
+
+/* ==================== 首页 - 板块九 Start ==================== */
+.news-template1 {
+    padding-top: 1.33rem;
+    padding-bottom: 1.33rem;
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0.42rem;
+        border-bottom: 0.05rem solid #DBDBDB;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .tabs {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .tab-item {
+            padding: 0.25rem 0.17rem;
+            min-width: 2.83rem;
+            margin-right: 0.33rem;
+            border-radius: 1.67rem;
+            transition: all .4s;
+            font-size: 0.3rem;
+            line-height: 1.2;
+            color: #666;
+            font-weight: bold;
+            text-align: center;
+
+            &.active {
+                background-color: @primary-color;
+                color: #fff;
+                box-shadow: 0rem 0.23rem 0.23rem 0rem rgba(47, 49, 139, 0.2);
+            }
+        }
+    }
+
+    .more-btn {
+        font-size: 0.27rem;
+        color: #999;
+        line-height: 1.8;
+        transition: all .4s;
+
+        &:hover {
+            color: @primary-color
+        }
+    }
+
+    .body {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-body {
+        display: block;
+        width: 46%;
+        transition: all .4s;
+
+        &:hover {
+            background-color: @primary-color;
+
+            .date,
+            .title,
+            .desc {
+                color: #fff;
+            }
+
+            .info {
+                &::before {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .image {
+            width: 100%;
+        }
+
+        .info {
+            position: relative;
+            padding-top: 0.42rem;
+            padding-left: 1.67rem;
+            padding-bottom: 0.5rem;
+            padding-right: 0.33rem;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 0.13rem;
+                height: 100%;
+                position: absolute;
+                top: -0.95rem;
+                left: 0.93rem;
+                background-color: @primary-color;
+                z-index: 9;
+                transition: all .4s;
+            }
+
+            .date {
+                font-size: 0.27rem;
+                color: #999;
+                line-height: 1.2;
+                margin-bottom: 0.3rem;
+                transition: all .4s;
+            }
+        }
+    }
+
+    .title {
+        font-size: 0.33rem;
+        color: #333;
+        line-height: 1.2;
+        transition: all .4s;
+    }
+
+    .desc {
+        margin-top: 0.33rem;
+        font-size: 0.25rem;
+        color: #888;
+        line-height: 1.8;
+        text-align: justify;
+        transition: all .4s;
+    }
+
+    .itembox {
+        width: 47%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .item {
+        width: 100%;
+        min-width: 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: @1p solid #dcdcdc;
+        transition: all .4s;
+        padding-top: 0.33rem;
+        padding-bottom: 0.33rem;
+
+        &:hover {
+            background-color: @primary-color;
+
+            .date,
+            .day,
+            .year,
+            .desc,
+            .title {
+                color: #fff;
+            }
+        }
+
+        .date {
+            padding: 0 0.67rem;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .day {
+            font-size: 1.17rem;
+            line-height: 1;
+            margin-bottom: 0.08rem;
+            color: #333;
+            font-weight: bold;
+            transition: all .4s;
+        }
+
+        .year {
+            font-size: 0.27rem;
+            color: #999;
+            transition: all .4s;
+        }
+
+        .info {
+            min-width: 0;
+            flex-grow: 1;
+            padding-right: 0.67rem;
+            transition: all .4s;
+        }
+
+        .title {
+            transition: all .4s;
+        }
+
+        .desc {
+            margin-top: 0.25rem;
+            transition: all .4s;
+        }
+    }
+}
+
+@media screen and (min-width: @pc-media) {
+    .news-template1 {}
+}
+
+@media screen and (max-width: @mobile-media) {
+    .news-template1 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .head {
+            padding-bottom: 20px;
+            border-bottom: 2px solid #DBDBDB;
+            width: 100%;
+            margin-bottom: 40px;
+
+            .tabs {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .tab-item {
+                width: 32%;
+                padding: 8px 10px;
+                min-width: inherit;
+                margin-right: 0;
+                font-size: 12px;
+
+                &:nth-child(3n-1) {
+                    margin-left: 2%;
+                    margin-right: 2%;
+                }
+
+                &:nth-child(3)~.tab-item {
+                    margin-top: 2%;
+                }
+
+                &.active {
+                    box-shadow: 0px 14px 14px 0px rgba(47, 49, 139, 0.2);
+                }
+            }
+        }
+
+        .more-btn {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+            display: block;
+        }
+
+        .body {
+            display: block;
+        }
+
+        .left-body {
+            width: 100%;
+
+            .image {}
+
+            .info {
+                padding-top: 20px;
+                padding-left: 40px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+
+                &::before {
+                    width: 4px;
+                    top: -60%;
+                    left: 12px;
+                }
+
+                .date {
+                    font-size: 12px;
+                    margin-bottom: 6px;
+                }
+            }
+        }
+
+        .title {
+            font-size: 16px;
+        }
+
+        .desc {
+            margin-top: 14px;
+            font-size: 12px;
+        }
+
+        .itembox {
+            width: 100%;
+        }
+
+        .item {
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .date {
+                padding: 0 20px;
+            }
+
+            .day {
+                font-size: 30px;
+                margin-bottom: 5px;
+            }
+
+            .year {
+                font-size: 12px;
+            }
+
+            .info {
+                padding-right: 20px;
+            }
+
+            .title {}
+
+            .desc {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/* ==================== 首页 - 板块九 End ==================== */

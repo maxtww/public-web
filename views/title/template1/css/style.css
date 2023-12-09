@@ -1,0 +1,41 @@
+/**
+ * @Description: 【标题】模板1
+ * @Author: MaXueWei    
+ * @Date: 2023-12-9 11:38:00
+ * @LastEditors: MaXueWei
+ * @LastEditTime: 2023-12-9 11:38:00
+ */
+/* ==================== 标题 - 模板1 Start ==================== */
+.title-template1 {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.8333rem;
+}
+.title-template1.white .text1,
+.title-template1.white .text2 {
+  color: #fff;
+}
+.title-template1 .text1 {
+  font-size: 0.3333rem;
+  color: #0d5bc1;
+  margin-bottom: 0.3333rem;
+  line-height: 1.1;
+}
+.title-template1 .text2 {
+  font-size: 0.6rem;
+  color: #333;
+  line-height: 1.2;
+}
+@media screen and (max-width: 749px) {
+  .title-template1 {
+    margin-bottom: 30px;
+  }
+  .title-template1 .text1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .title-template1 .text2 {
+    font-size: 22px;
+  }
+}
+/* ==================== 标题 - 模板1 End ==================== */

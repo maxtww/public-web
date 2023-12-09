@@ -1,3 +1,11 @@
+// ========================================
+// 
+//                  公共样式
+// 
+// ========================================
+// 主题色
+@import "_variables";
+
 /* ==================== 重置样式 Start ==================== */
 * {
   margin: 0;
@@ -5,51 +13,67 @@
   box-sizing: border-box;
   font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
 }
+
 a {
   text-decoration: none;
   outline: none;
 }
+
 html {
   font-size: 60px;
 }
-body::-webkit-scrollbar {
-  width: 4px;
-  background: #ececec;
-  border-radius: 100px;
+
+body {
+  &::-webkit-scrollbar {
+    width: 4px;
+    background: #ececec;
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: @primary-color;
+    cursor: pointer;
+  }
 }
-body::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  background: #0d5bc1;
-  cursor: pointer;
-}
+
 img {
   vertical-align: middle;
   max-width: 100%;
 }
+
 ul,
 li {
   list-style: none;
 }
+
 input,
 button {
   outline: 0 none;
   border: none;
   background-color: transparent;
 }
+
 button {
   cursor: pointer;
 }
+
 /* 图片统一动画 */
 .mxw-image {
   overflow: hidden;
+
+  img {
+    transition: transform .8s;
+    width: 100%;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
 }
-.mxw-image img {
-  transition: transform 0.8s;
-  width: 100%;
-}
-.mxw-image:hover img {
-  transform: scale(1.05);
-}
+
 main,
 header,
 footer,
@@ -57,58 +81,70 @@ footer,
 section {
   font-size: 16px;
 }
+
 main {
   position: relative;
   z-index: 10;
 }
+
 section {
   position: relative;
   z-index: 9;
 }
+
 .swiper-button-prev,
 .swiper-button-next {
   background-image: none;
 }
+
 @media screen and (max-width: 1800px) {
   html {
     font-size: 53px;
   }
 }
+
 @media screen and (max-width: 1680px) {
   html {
     font-size: 45px;
   }
 }
+
 @media screen and (max-width: 1440px) {
   html {
     font-size: 44px;
   }
 }
+
 @media screen and (max-width: 1400px) {
   html {
     font-size: 43px;
   }
 }
+
 @media screen and (max-width: 1366px) {
   html {
     font-size: 42px;
   }
 }
+
 @media screen and (max-width: 1280px) {
   html {
     font-size: 39px;
   }
 }
+
 @media screen and (max-width: 1152px) {
   html {
     font-size: 35px;
   }
 }
-@media screen and (max-width: 749px) {
+
+@media screen and (max-width: @mobile-media) {
   html {
     font-size: 60px;
   }
 }
+
 /* ==================== 重置样式 End ==================== */
 /* ==================== 通用容器大小 Start ==================== */
 .mxw-box {
@@ -117,34 +153,41 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+
 @media screen and (max-width: 1820px) {
   .mxw-box {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
-@media screen and (max-width: 749px) {
+
+@media screen and (max-width: @mobile-media) {
+
   .mxw-box {
     max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
 }
+
 /* ==================== 通用容器大小 End ==================== */
 /* ==================== 通用断点隐藏 Start ==================== */
-@media screen and (max-width: 749px) {
+@media screen and (max-width: @mobile-media) {
   .m-hide {
     display: none !important;
   }
 }
-@media screen and (min-width: 750px) {
+
+@media screen and (min-width: @pc-media) {
   .pc-hide {
     display: none !important;
   }
 }
+
 /* ==================== 通用断点隐藏 End ==================== */
 /* ==================== 通用布局 start ==================== */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: @pc-media) {
+
   .u-row-2,
   .u-row-3,
   .u-row-4,
@@ -155,57 +198,74 @@ section {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
-  .u-row-2 > .u-col {
+
+  .u-row-2>.u-col {
     width: 48%;
   }
-  .u-row-2 > .u-col:nth-child(2n) {
+
+  .u-row-2>.u-col:nth-child(2n) {
     margin-left: 4%;
   }
-  .u-row-2 > .u-col:nth-child(2) ~ .u-col {
+
+  .u-row-2>.u-col:nth-child(2)~.u-col {
     margin-top: 4%;
   }
-  .u-row-3 > .u-col {
+
+  .u-row-3>.u-col {
     width: 32%;
   }
-  .u-row-3 > .u-col:nth-child(3n-1) {
+
+  .u-row-3>.u-col:nth-child(3n-1) {
     margin-left: 2%;
     margin-right: 2%;
   }
-  .u-row-3 > .u-col:nth-child(3) ~ .u-col {
+
+  .u-row-3>.u-col:nth-child(3)~.u-col {
     margin-top: 2%;
   }
-  .u-row-4 > .u-col {
+
+  .u-row-4>.u-col {
     width: 23.5%;
     margin-right: 2%;
   }
-  .u-row-4 > .u-col:nth-child(4n) {
+
+  .u-row-4>.u-col:nth-child(4n) {
     margin-right: 0%;
   }
-  .u-row-4 > .u-col:nth-child(4) ~ .u-col {
+
+  .u-row-4>.u-col:nth-child(4)~.u-col {
     margin-top: 2%;
   }
-  .u-row-5 > .u-col {
+
+  .u-row-5>.u-col {
     width: 18.4%;
     margin-right: 2%;
   }
-  .u-row-5 > .u-col:nth-child(5n) {
+
+  .u-row-5>.u-col:nth-child(5n) {
     margin-right: 0%;
   }
-  .u-row-5 > .u-col:nth-child(5) ~ .u-col {
+
+  .u-row-5>.u-col:nth-child(5)~.u-col {
     margin-top: 2%;
   }
-  .u-row-6 > .u-col {
+
+  .u-row-6>.u-col {
     width: 15.5%;
     margin-right: 1.4%;
   }
-  .u-row-6 > .u-col:nth-child(6n) {
+
+  .u-row-6>.u-col:nth-child(6n) {
     margin-right: 0%;
   }
-  .u-row-6 > .u-col:nth-child(6) ~ .u-col {
+
+  .u-row-6>.u-col:nth-child(6)~.u-col {
     margin-top: 1.4%;
   }
 }
-@media screen and (max-width: 749px) {
+
+@media screen and (max-width: @mobile-media) {
+
   .u-row-2,
   .u-row-3,
   .u-row-4,
@@ -216,31 +276,37 @@ section {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
+
   .u-row-2 .u-col {
     width: 100%;
   }
-  .u-row-2 .u-col:nth-child(1) ~ .u-col {
+
+  .u-row-2 .u-col:nth-child(1)~.u-col {
     margin-top: 2%;
   }
-  .u-row-3 > .u-col,
-  .u-row-4 > .u-col,
-  .u-row-5 > .u-col,
-  .u-row-6 > .u-col {
+
+  .u-row-3>.u-col,
+  .u-row-4>.u-col,
+  .u-row-5>.u-col,
+  .u-row-6>.u-col {
     width: 48%;
   }
-  .u-row-3 > .u-col:nth-child(2n),
-  .u-row-4 > .u-col:nth-child(2n),
-  .u-row-5 > .u-col:nth-child(2n),
-  .u-row-6 > .u-col:nth-child(2n) {
+
+  .u-row-3>.u-col:nth-child(2n),
+  .u-row-4>.u-col:nth-child(2n),
+  .u-row-5>.u-col:nth-child(2n),
+  .u-row-6>.u-col:nth-child(2n) {
     margin-left: 4%;
   }
-  .u-row-3 > .u-col:nth-child(2) ~ .u-col,
-  .u-row-4 > .u-col:nth-child(2) ~ .u-col,
-  .u-row-5 > .u-col:nth-child(2) ~ .u-col,
-  .u-row-6 > .u-col:nth-child(2) ~ .u-col {
+
+  .u-row-3>.u-col:nth-child(2)~.u-col,
+  .u-row-4>.u-col:nth-child(2)~.u-col,
+  .u-row-5>.u-col:nth-child(2)~.u-col,
+  .u-row-6>.u-col:nth-child(2)~.u-col {
     margin-top: 4%;
   }
 }
+
 /* ==================== 通用布局 end ==================== */
 /* ==================== 通用文本行数限制 start ==================== */
 .u-line-1 {
@@ -248,21 +314,27 @@ section {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 .u-line-2 {
   -webkit-line-clamp: 2;
 }
+
 .u-line-3 {
   -webkit-line-clamp: 3;
 }
+
 .u-line-4 {
   -webkit-line-clamp: 4;
 }
+
 .u-line-5 {
   -webkit-line-clamp: 5;
 }
+
 .u-line-6 {
   -webkit-line-clamp: 6;
 }
+
 .u-line-2,
 .u-line-3,
 .u-line-4,
@@ -274,21 +346,25 @@ section {
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+
 /* ==================== 通用文本行数限制 end ==================== */
 /* ==================== 图片放大插件 Start ==================== */
-.viewer-list > li {
+.viewer-list>li {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+    transform: translate(0, 0) !important;
+  }
 }
-.viewer-list > li img {
-  width: 100% !important;
-  height: auto !important;
-  transform: translate(0, 0) !important;
-}
+
 /* ==================== 图片放大插件 End ==================== */
 /* ==================== ElementUI Start ==================== */
 .el-table-filter__bottom {
   font-size: 12px;
 }
+
 /* ==================== ElementUI End ==================== */

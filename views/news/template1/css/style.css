@@ -1,0 +1,266 @@
+/**
+ * @Description: 【新闻】模板1
+ * @Author: MaXueWei    
+ * @Date: 2023-12-9 11:38:45
+ * @LastEditors: MaXueWei
+ * @LastEditTime: 2023-12-9 11:38:45
+ */
+/* ==================== 首页 - 板块九 Start ==================== */
+.news-template1 {
+  padding-top: 1.33rem;
+  padding-bottom: 1.33rem;
+}
+.news-template1 .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.42rem;
+  border-bottom: 0.05rem solid #DBDBDB;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.news-template1 .head .tabs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.news-template1 .head .tab-item {
+  padding: 0.25rem 0.17rem;
+  min-width: 2.83rem;
+  margin-right: 0.33rem;
+  border-radius: 1.67rem;
+  transition: all 0.4s;
+  font-size: 0.3rem;
+  line-height: 1.2;
+  color: #666;
+  font-weight: bold;
+  text-align: center;
+}
+.news-template1 .head .tab-item.active {
+  background-color: #0d5bc1;
+  color: #fff;
+  box-shadow: 0rem 0.23rem 0.23rem 0rem rgba(47, 49, 139, 0.2);
+}
+.news-template1 .more-btn {
+  font-size: 0.27rem;
+  color: #999;
+  line-height: 1.8;
+  transition: all 0.4s;
+}
+.news-template1 .more-btn:hover {
+  color: #0d5bc1;
+}
+.news-template1 .body {
+  display: flex;
+  justify-content: space-between;
+}
+.news-template1 .left-body {
+  display: block;
+  width: 46%;
+  transition: all 0.4s;
+}
+.news-template1 .left-body:hover {
+  background-color: #0d5bc1;
+}
+.news-template1 .left-body:hover .date,
+.news-template1 .left-body:hover .title,
+.news-template1 .left-body:hover .desc {
+  color: #fff;
+}
+.news-template1 .left-body:hover .info::before {
+  background-color: #fff;
+}
+.news-template1 .left-body .image {
+  width: 100%;
+}
+.news-template1 .left-body .info {
+  position: relative;
+  padding-top: 0.42rem;
+  padding-left: 1.67rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.33rem;
+}
+.news-template1 .left-body .info::before {
+  content: "";
+  display: block;
+  width: 0.13rem;
+  height: 100%;
+  position: absolute;
+  top: -0.95rem;
+  left: 0.93rem;
+  background-color: #0d5bc1;
+  z-index: 9;
+  transition: all 0.4s;
+}
+.news-template1 .left-body .info .date {
+  font-size: 0.27rem;
+  color: #999;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+  transition: all 0.4s;
+}
+.news-template1 .title {
+  font-size: 0.33rem;
+  color: #333;
+  line-height: 1.2;
+  transition: all 0.4s;
+}
+.news-template1 .desc {
+  margin-top: 0.33rem;
+  font-size: 0.25rem;
+  color: #888;
+  line-height: 1.8;
+  text-align: justify;
+  transition: all 0.4s;
+}
+.news-template1 .itembox {
+  width: 47%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.news-template1 .item {
+  width: 100%;
+  min-width: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dcdcdc;
+  transition: all 0.4s;
+  padding-top: 0.33rem;
+  padding-bottom: 0.33rem;
+}
+.news-template1 .item:hover {
+  background-color: #0d5bc1;
+}
+.news-template1 .item:hover .date,
+.news-template1 .item:hover .day,
+.news-template1 .item:hover .year,
+.news-template1 .item:hover .desc,
+.news-template1 .item:hover .title {
+  color: #fff;
+}
+.news-template1 .item .date {
+  padding: 0 0.67rem;
+  flex-shrink: 0;
+  text-align: center;
+}
+.news-template1 .item .day {
+  font-size: 1.17rem;
+  line-height: 1;
+  margin-bottom: 0.08rem;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+.news-template1 .item .year {
+  font-size: 0.27rem;
+  color: #999;
+  transition: all 0.4s;
+}
+.news-template1 .item .info {
+  min-width: 0;
+  flex-grow: 1;
+  padding-right: 0.67rem;
+  transition: all 0.4s;
+}
+.news-template1 .item .title {
+  transition: all 0.4s;
+}
+.news-template1 .item .desc {
+  margin-top: 0.25rem;
+  transition: all 0.4s;
+}
+@media screen and (max-width: 749px) {
+  .news-template1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .news-template1 .head {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DBDBDB;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .news-template1 .head .tabs {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .news-template1 .head .tab-item {
+    width: 32%;
+    padding: 8px 10px;
+    min-width: inherit;
+    margin-right: 0;
+    font-size: 12px;
+  }
+  .news-template1 .head .tab-item:nth-child(3n-1) {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .news-template1 .head .tab-item:nth-child(3) ~ .tab-item {
+    margin-top: 2%;
+  }
+  .news-template1 .head .tab-item.active {
+    box-shadow: 0px 14px 14px 0px rgba(47, 49, 139, 0.2);
+  }
+  .news-template1 .more-btn {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+  }
+  .news-template1 .body {
+    display: block;
+  }
+  .news-template1 .left-body {
+    width: 100%;
+  }
+  .news-template1 .left-body .info {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  .news-template1 .left-body .info::before {
+    width: 4px;
+    top: -60%;
+    left: 12px;
+  }
+  .news-template1 .left-body .info .date {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  .news-template1 .title {
+    font-size: 16px;
+  }
+  .news-template1 .desc {
+    margin-top: 14px;
+    font-size: 12px;
+  }
+  .news-template1 .itembox {
+    width: 100%;
+  }
+  .news-template1 .item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .news-template1 .item .date {
+    padding: 0 20px;
+  }
+  .news-template1 .item .day {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .news-template1 .item .year {
+    font-size: 12px;
+  }
+  .news-template1 .item .info {
+    padding-right: 20px;
+  }
+  .news-template1 .item .desc {
+    margin-top: 10px;
+  }
+}
+/* ==================== 首页 - 板块九 End ==================== */
