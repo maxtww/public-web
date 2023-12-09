@@ -4,7 +4,13 @@
 // 
 // ========================================
 // 主题色
-@import "_variables";
+@primary-color: #0d5bc1;
+// css断点宽度
+@pc-media: 750px;
+// css断点宽度
+@mobile-media: 749px;
+@1p: 1px;
+@2p: 2px;
 
 /* ==================== 滤镜白色 Start ==================== */
 .filter-white {
@@ -69,71 +75,114 @@
 @media screen and (max-width: @mobile-media) {}
 
 /* ==================== 在1920下图片保持最小1920p End ==================== */
-/* ==================== 通用分页器 Start ==================== */
-.swiper-pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 4;
+/* ==================== 友情链接样式 Start ==================== */
+footer {
+    // 底部友情链接
+    .foot-link {
+        position: relative;
+        z-index: 13;
+        background-color: #2F318B;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
 
-    .swiper-pagination-bullet {
-        width: 0.23rem;
-        height: 0.23rem;
-        margin-left: 0.1rem;
-        margin-right: 0.1rem;
-        opacity: 1;
-        background-color: #D4D4D4;
-        border-radius: 100%;
+        img,
+        span,
+        a {
+            position: relative;
+            z-index: 3;
+        }
 
-        &.swiper-pagination-bullet-active {
-            background-color: @primary-color;
+        span {
+            color: #fff;
+            font-size: 0.25rem;
+            cursor: pointer;
+            margin-right: 0.33rem;
+            padding-left: 0.17rem;
+            border-left: 0.08rem solid #fff;
+        }
+
+        img {
+            width: 0.5rem;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.8;
+            font-size: 0.23rem;
+
+            &:last-child:after {
+                display: none;
+            }
+
+            &:after {
+                content: ",";
+            }
+
+            &:hover {
+                text-decoration: underline;
+                color: @primary-color;
+            }
         }
     }
-}
 
-@media screen and (max-width: @mobile-media) {
-    .swiper-pagination {
-
-        .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-        }
-    }
-}
-
-/* ==================== 通用分页器 End ==================== */
-/* ==================== 通用前进后退 Start ==================== */
-.swiper-button-prev,
-.swiper-button-next {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    transition: all .4s;
-    flex-shrink: 0;
-    margin: 0;
-    background-color: @primary-color;
-    color: #fff;
-    transform: translateY(-50%);
-    top: 50%;
-
-    &:after {
+    // 线上友情链接
+    .foot-online-link {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
         font-size: 0.2rem;
-        font-weight: bold;
-    }
+        padding: 0.17rem 0.33rem;
+        display: none;
 
-    &.swiper-button-disabled {
-        // display: none;
-    }
+        a {
+            color: #333;
+            line-height: 1.8;
+            font-size: 0.23rem;
 
-    &:after {
-        color: #fff;
+            &:last-child:after {
+                display: none;
+            }
+
+            &:after {
+                content: ",";
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
+
+@media screen and (min-width: @pc-media) {
+    footer {}
+}
+
 @media screen and (max-width: @mobile-media) {
-    .swiper-button-prev,
-    .swiper-button-next {
-        width: 30px;
-        height: 30px;
+    footer {
+
+        // 底部友情链接
+        .foot-link {
+            display: none;
+            margin-top: 19.8px;
+            font-size: 12px;
+
+            a {
+                font-size: 12px;
+            }
+        }
+
+        // 线上友情链接
+        .foot-online-link {
+            padding: 10.2px 15px;
+
+            a {
+                font-size: 12px;
+            }
+        }
     }
 }
-/* ==================== 通用前进后退 End ==================== */
+
+/* ==================== 友情链接样式 End ==================== */
